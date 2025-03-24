@@ -10,33 +10,71 @@ def q01():
 def q02():
     print(30*27)
 #3. Faça um programa que imprima a média aritmética entre os números 5, 8, 12.
-#def q3():
+def q3(): 
+    media = (5 + 8+ 12) / 3
+    print(media)
+
 #4. Faça um programa que leia e imprima um número inteiro.
 def q04():
     numero  = int(input('Digite um número inteiro: '))
     print(numero)
 #5. Faça um programa que leia dois números reais e os imprima.
+def q05():
+    num1 = float(input('Digite o primeiro número: '))
+    num2 = float(input('Digite o segundo número:'))
+    print(num1,num2)
 
 #6. Faça um programa que leia um número inteiro e imprima o seu
 #   antecessor e o seu sucessor.
-
+def q06():
+    num = int(input('Digite um número: '))
+    print(f'Antecessor: {num-1}')
+    print(f'Sucessor : {num+1}')
+    
 #7. Faça um programa que leia o nome o endereço e o telefone de
 #   um cliente e ao final, imprima esses dados.
+def q07(): 
+    nome = input('nome: ')
+    endereço = input('endereço: ')
+    telefone = input('telefone: ')
+    texto = f'''
+    Nome: {nome}
+    Endereço: {endereço}
+    telefone: {telefone}
+    '''
 
 #8. Faça um programa que leia dois números inteiros e imprima a
 #   subtração deles.
-
+def q08(): 
+    num1 = int(input('digite o primeiro numero inteiro:'))
+    num2 = int(input('digite o segunto numero inteiro:'))
+    print(f'{num1} - {num2} = {num1-num2}')
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
+def q09()
+
 
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+def q10(): 
+    num1 = float(input('Num1: '))
+    num2 = float(input('Num2: '))
+    num3 = float(input('Num 3: '))
+    media = (num1+num2+num3)/3
+    print(media) 
+
 
 #11. Faça um programa que leia dois números reais e calcule as
 #    quatro operações básicas entre estes dois números, adição,
 #    subtração,multiplicação e divisão. Ao final, o programa
 #    deve imprimir os resultados dos cálculos.
-
+def q11(): 
+    num1 = int(input('Digite o primeiro numero: '))
+    num2= int(input('Digite o segundo numero: '))
+    print(f' {num1+num2}')
+    print(f' {num1-num2}')
+    print(f' {num1*num2}')
+    print(f'{num1/num2}')
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
