@@ -50,8 +50,6 @@ def q08():
     num2 = int(input('digite o segunto numero inteiro:'))
     print(f'{num1} - {num2} = {num1-num2}')
 #9. Faça um programa que leia um número real e imprima ¼ deste número.
-def q09()
-
 
 #10. Faça um programa que leia três números reais e calcule a
 #    média aritmética destes números. Ao final, o programa deve
@@ -71,13 +69,16 @@ def q10():
 def q11(): 
     num1 = int(input('Digite o primeiro numero: '))
     num2= int(input('Digite o segundo numero: '))
-    print(f' {num1+num2}')
-    print(f' {num1-num2}')
-    print(f' {num1*num2}')
-    print(f'{num1/num2}')
+    print(f' {num1} + {num2} = {num1+num2}')
+    print(f'{num1} - {num2} = {num1-num2}')
+    print(f' {num1} * {num2} = {num1*num2}')
+    print(f'{num1} / {num2} = {num1/num2}')
 #12. Faça um programa que leia um número real e calcule o
 #    quadrado deste número. Ao final, o programa deve
 #    imprimir o resultado do cálculo.
+def q12():
+    numero = float(input('Número: '))
+    print(numero*numero)
 
 #13. Faça um programa que leia o saldo de uma conta poupança e
 #    imprima o novo saldo, considerando um reajuste de 2%.
@@ -88,6 +89,11 @@ def q11():
 #15. Faça um programa que leia o valor de um produto, o percentual
 #    do desconto desejado e imprima o valor do desconto e o valor
 #    do produto subtraindo o desconto.
+def q15():      
+     produto = input('Valor do produto : ')
+     desconto = input('Valor do desconto: ')
+    print({produto} - {desconto} = {produto - desconto})
+q15()
 
 #16. Faça um programa que calcule o reajuste do salário de um
 #    funcionário. Para isso, o programa deverá ler o salário atual
