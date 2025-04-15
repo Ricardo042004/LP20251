@@ -1,7 +1,7 @@
 '''
 Exercícios sobre os comandos de condição em python
 '''
-
+from datetime import date, datetime
 def exemplo_if_else():
     media = float(input('Média: '))
     if media >= 6:
@@ -90,19 +90,20 @@ def q10():
     if (c < b <a):
         print(f'{c} {b} {a}')
 #11. Faça um programa que leia 3 números e imprima o maior deles.
-
+def q11(): 
+    a =int(input('Digite um número inteiro: '))
+    maior = a 
+    b = int(input('Digite um número inteiro: '))
+    if b > maior: 
+       maior = b
+    c = int(input('Digite um número inteiro: '))
+    if c > maior:
+        maior = c 
+    print(f'O maior número  é: {maior}')
 #12. Faça um programa que leia a idade de uma pessoa e informe:
 #• Se é maior de idade
 #• Se é menor de idade
 #• Se é maior de 65 anos
-def q12():
-   idade = int(input("Qual é a idade? "))
-    if (65 >= idade >= 18):
-        print(f"É maior de idade.")
-    elif (idade < 18):
-        print(f"É menor de idade.")
-    elif (idade > 65):
-        print("É maior de 65anos.")
        
 ##13. Faça um programa que permita entrar com o nome, a nota da prova 1 e a nota
 #da prova 2 de um aluno. O programa deve imprimir o nome, a nota da prova 1,
@@ -160,12 +161,15 @@ def q13():
 #correspondente. Caso o usuário digite um número fora desse intervalo, deverá
 #aparecer uma mensagem informando que não existe mês com este número.
 def q18():
-    mes = int(input("digite o número do mês: "))
+    mes = int(input('Número do Mês: '))
     if mes < 1 or mes > 12:
-        print("mês inválido!")
-        else: 
-            data = datetime.strptime(f'01/{mes}/24','%d/%m/%y')
-             mes_extenso = data.strftime('%B')
+        print('Mês Inválido!')
+    else:
+        data = datetime.strptime(f'01/{mes}/25', '%d/%m/%y')
+        mes_extenso = data.strftime('%B')
+        print(mes_extenso)
+        #print(tradutor.translate("Month: " = mes_extenso"))
+
 
 #19. Em um campeonato nacional de arco-e-flecha, tem-se equipes de três jogadores
 #para cada estado. Sabendo-se que os arqueiros de uma equipe não obtiveram o
