@@ -39,8 +39,22 @@ def q1():
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def q3():   
+    num = int(input("Digite um número: "))
+    if(num %3==0):
+        print(f"{num} é multiplo por 3")
+    else:
+        print(f"{num} não é multiplo de 3")
+
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def q4():
+    num = int(input("Digite um número: "))
+    if(num %5==0):
+        print(f"{num} é divisível por 5")
+    else:
+        print(f"{num} não é divisível por 5")
+
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 def q5():
@@ -57,9 +71,30 @@ def q5():
 
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
+def q7():
+    num = int(input("Digite um numero: "))
+    if(20 <= num <= 50):
+        print(f"{num} está entre 20 e 50")
+    else: 
+        print(f"{num} não está entre 20 e 50")
+
+
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
+def q8(): 
+    num = int(input("Digite um número"))
+    if(num <20):
+        print(f"{num} é menor que 20")
+    elif(num == 20):
+        print(f"{num} é igual a 20")
+    else:
+        print(f"{num} é maior que 20")
+
+
+#9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
+#   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
+#   verificar se o ano de nascimento informado é válido.
 
 #9. Faça um programa que permita entrar com o ano de nascimento da pessoa e com o
 #   ano atual. O programa deve imprimir a idade da pessoa. Não se esqueça de
