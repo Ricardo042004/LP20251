@@ -29,7 +29,18 @@ def q2():
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
-
+def q05():
+    diario = []
+    contchar = 65
+    for _ in range (15):
+        aluno = dict()
+        aluno['nome'] = chr(contchar)
+        contchar += 1
+        aluno['n1'] = random.randrange(0,11)
+        aluno['n2'] = random.randrange(0,11)
+        aluno['media'] = round((aluno['n1'] + aluno ['n2'])/2,1)
+        aluno['situacao'] = 'AP' if aluno['media']>=6 else 'RP'
+        diario.append(aluno)
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
