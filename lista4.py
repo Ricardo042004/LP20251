@@ -1,4 +1,5 @@
 import random
+from biblioteca import input_int
 '''
 Lista de Exercícios referentes a coleções e arquivos em python
 '''
@@ -7,17 +8,41 @@ Lista de Exercícios referentes a coleções e arquivos em python
 #permita que o usuário digite um número inteiro para ser buscado na lista, se
 #for encontrado o programa deve imprimir a posição desse número na lista, caso
 #contrário, deve imprimir a mensagem: "Nao encontrado!".
+def q1():
+    lista = []
+    for _ in range(15):
+        lista.append(random.randrange(100))
+    print(lista)
+    numero = int(input_int('Digite um número a ser buscado: ',0,100))
+    try:
+        posicao = lista.index(numero)
+    except ValueError:
+        print(f'{numero} não localizado na lista')
+    else:
+        print(f'Localizado na posição: {posicao}')
+        
 
 #2. Faça um programa que armazene 10 letras em uma lista e imprima uma listagem
-#numerada.
+#numerada. (ASCII 65-90)
 def q2():
     letras = []
     for _ in range(10):
-        letras.append(random.randragne(65,91))
+        letras.append(chr(random.randrange(65,91)))
     cont = 1
     for c in letras:
-        print(f'{cont}: {c} ')
-        cont += 1 
+        print(f'{cont}: {c}')
+        cont+=1
+
+#2.1 Faça um programa que peça ao usuário para informar a qtde de caracteres
+# para a geração de uma senha aleatória. Ao final o programa deve exibir a
+# senha sugerida. (ASCII 40-126)
+def q21():
+    qtde = input_int('Qtde de caracteres para a senha: ',8,20)
+    senha = ''
+    for _ in range(qtde):
+        senha+=chr(random.randrange(40,127))
+    print(f'Senha sugerida: {senha}')
+
 #3. Construa uma programa que armazene 15 números em uma lista e imprima
 #uma listagem numerada contendo o número e uma das mensagens: par ou ímpar.
 
@@ -29,18 +54,26 @@ def q2():
 #Aprovado ou 2-Reprovado. Ao final o programa deve imprimir uma listagem
 #contendo as notas, a média e a situação de cada aluno em formato tabulado.
 #Utilize quantas listas forem necessárias para armazenar os dados.
-def q05():
+def q5():
     diario = []
-    contchar = 65
-    for _ in range (15):
+    contchar = 65 # Código ASCII da letra A
+    for _ in range(15):
         aluno = dict()
         aluno['nome'] = chr(contchar)
-        contchar += 1
+        contchar += 1 # Avançar para a próxima letra para representar o nome do próximo aluno
         aluno['n1'] = random.randrange(0,11)
         aluno['n2'] = random.randrange(0,11)
-        aluno['media'] = round((aluno['n1'] + aluno ['n2'])/2,1)
+        aluno['media'] = round((aluno['n1'] + aluno['n2'])/2,1)
         aluno['situacao'] = 'AP' if aluno['media']>=6 else 'RP'
         diario.append(aluno)
+    
+    resultado = 'NOME\tN1\tN2\tMEDIA\tSITUACAO\n'
+    for a in diario:
+        resultado += f'{a["nome"]}\t{a["n1"]}\t{a["n2"]}\t{a["media"]}\t{a["situacao"]}\n'
+    print(resultado)
+
+
+
 #6. Construa um programa que permita armazenar o salário de 20 pessoas. Calcular
 #e armazenar o novo salário sabendo-se que o reajuste foi de 8%. Imprimir uma
 #listagem numerada com o salário e o novo salário. Declare quantas listas forem
@@ -112,3 +145,6 @@ def q05():
 
 #20. Faça um programa que leia a matrícula e a média de 100 alunos. Ordene da maior
 #para a menor nota e imprima uma relação contendo todas as matrículas e médias.
+
+questao = int(input('Questão a ser executada: '))
+eval(f'q{questao}()')
